@@ -1,9 +1,12 @@
 ---
-title: "Post With Code"
-author: "Not Harlow Malloc"
+title: "Code post"
+author: "Siddhant"
 date: "2024-03-25"
-categories: [news, code, analysis]
 image: "image.jpg"
 ---
 
 This is a post with executable code.
+
+```py
+print('Hello, world')
+```
