@@ -20,7 +20,7 @@ for num in range(10):
 print(squares)
 ```
 
-The newer or more *pythonic* way to do that is this: initialize the `squares` list to the for loop directly. 
+The newer or more *pythonic* way to do that is this: initialize the `squares` list to the `for` loop directly. 
 
 ```{python}
 squares = [num**2 for num in range(10)]
@@ -50,4 +50,4 @@ input_list = ["apple", "pear", "fig", "banana", "kiwi"]
 new_list = [string for string in input_list if len(string) > 3]
 print(new_list)
 ```
-
+The syntax here is `list_variable = [what the loop should return : loop : conditional]`

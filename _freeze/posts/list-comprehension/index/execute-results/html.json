@@ -1,0 +1,12 @@
+{
+  "hash": "d557f19c5f1008556608a3189515a13f",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Python List Comprehension Example\"\nauthor: \"Siddhant\"\ndate: \"2024-03-25\"\ncategories: [python] \n---\n\n# Example of python list Comprehension \n\nLately, I've been seeing the normal way of using lists being replaced by _list comprehension_. \n\nHere's how it works. Let's say you want to add the squares of 1 to 10 to a list. How would you do that? \n\nThe \"Old\" way that I'm familiar with is this: \n\n::: {#078cce11 .cell execution_count=1}\n``` {.python .cell-code}\nsquares = [] # initialise an empty list \nfor num in range(10):\n    squares.append(num**2)\nprint(squares)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n```\n:::\n:::\n\n\nThe newer or more *pythonic* way to do that is this: initialize the `squares` list to the `for` loop directly. \n\n::: {#9c94145d .cell execution_count=2}\n``` {.python .cell-code}\nsquares = [num**2 for num in range(10)]\nprint(squares)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n```\n:::\n:::\n\n\nYou can use list comprehensions with conditional statements too! \n\nHere's a problem: Given a list of strings, create a new list that contains only those strings that are longer than 3 characters.\n\nOne way to do it: \n\n::: {#9f1246aa .cell execution_count=3}\n``` {.python .cell-code}\nlist_of_strings = [\"apple\", \"pear\", \"fig\", \"banana\", \"kiwi\"]\n\nl = []\nfor string in list_of_strings:\n    if len(string) > 3:\n        l.append(string)\n        \nprint(l)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n['apple', 'pear', 'banana', 'kiwi']\n```\n:::\n:::\n\n\nBut here's a more concise way to do the same thing \n\n::: {#18f5aabf .cell execution_count=4}\n``` {.python .cell-code}\ninput_list = [\"apple\", \"pear\", \"fig\", \"banana\", \"kiwi\"]\nnew_list = [string for string in input_list if len(string) > 3]\nprint(new_list)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n['apple', 'pear', 'banana', 'kiwi']\n```\n:::\n:::\n\n\nThe syntax here is `list_variable = [what the loop should return : loop : conditional]`\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

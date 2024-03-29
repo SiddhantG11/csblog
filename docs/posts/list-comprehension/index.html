@@ -9,7 +9,7 @@
 <meta name="author" content="Siddhant">
 <meta name="dcterms.date" content="2024-03-25">
 
-<title>csblog - Python List Comprehension Example</title>
+<title>Siddhant’s Blog - Python List Comprehension Example</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">csblog</span>
+    <span class="navbar-title">Siddhant’s Blog</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -127,16 +127,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
-</i> 
-<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -193,7 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Lately, I’ve been seeing the normal way of using lists being replaced by <em>list comprehension</em>.</p>
 <p>Here’s how it works. Let’s say you want to add the squares of 1 to 10 to a list. How would you do that?</p>
 <p>The “Old” way that I’m familiar with is this:</p>
-<div id="e6779bf0" class="cell" data-execution_count="1">
+<div id="078cce11" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>squares <span class="op">=</span> [] <span class="co"># initialise an empty list </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    squares.append(num<span class="op">**</span><span class="dv">2</span>)</span>
@@ -202,8 +192,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
 </div>
 </div>
-<p>The newer or more <em>pythonic</em> way to do that is this: initialize the <code>squares</code> list to the for loop directly.</p>
-<div id="764eb49f" class="cell" data-execution_count="2">
+<p>The newer or more <em>pythonic</em> way to do that is this: initialize the <code>squares</code> list to the <code>for</code> loop directly.</p>
+<div id="9c94145d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>squares <span class="op">=</span> [num<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(squares)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -213,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You can use list comprehensions with conditional statements too!</p>
 <p>Here’s a problem: Given a list of strings, create a new list that contains only those strings that are longer than 3 characters.</p>
 <p>One way to do it:</p>
-<div id="ecc8c234" class="cell" data-execution_count="3">
+<div id="9f1246aa" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>list_of_strings <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"pear"</span>, <span class="st">"fig"</span>, <span class="st">"banana"</span>, <span class="st">"kiwi"</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> []</span>
@@ -227,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>But here’s a more concise way to do the same thing</p>
-<div id="c0eb7ded" class="cell" data-execution_count="4">
+<div id="18f5aabf" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>input_list <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"pear"</span>, <span class="st">"fig"</span>, <span class="st">"banana"</span>, <span class="st">"kiwi"</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>new_list <span class="op">=</span> [string <span class="cf">for</span> string <span class="kw">in</span> input_list <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&gt;</span> <span class="dv">3</span>]</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(new_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -235,6 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>['apple', 'pear', 'banana', 'kiwi']</code></pre>
 </div>
 </div>
+<p>The syntax here is <code>list_variable = [what the loop should return : loop : conditional]</code></p>
 
 
 </section>
