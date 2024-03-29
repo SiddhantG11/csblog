@@ -1,9 +1,53 @@
 ---
-title: "Code to see if this is working"
+title: "Python List Comprehension Example"
 author: "Siddhant"
 date: "2024-03-25"
+categories: [python] 
 ---
 
-```js
-console.log('hello world');
+# Example of python list Comprehension 
+
+Lately, I've been seeing the normal way of using lists being replaced by _list comprehension_. 
+
+Here's how it works. Let's say you want to add the squares of 1 to 10 to a list. How would you do that? 
+
+The "Old" way that I'm familiar with is this: 
+
+```{python}
+squares = [] # initialise an empty list 
+for num in range(10):
+    squares.append(num**2)
+print(squares)
 ```
+
+The newer or more *pythonic* way to do that is this: initialize the `squares` list to the for loop directly. 
+
+```{python}
+squares = [num**2 for num in range(10)]
+print(squares)
+```
+
+You can use list comprehensions with conditional statements too! 
+
+Here's a problem: Given a list of strings, create a new list that contains only those strings that are longer than 3 characters.
+
+One way to do it: 
+
+```{python}
+list_of_strings = ["apple", "pear", "fig", "banana", "kiwi"]
+
+l = []
+for string in list_of_strings:
+    if len(string) > 3:
+        l.append(string)
+        
+print(l)
+```
+But here's a more concise way to do the same thing 
+
+```{python}
+input_list = ["apple", "pear", "fig", "banana", "kiwi"]
+new_list = [string for string in input_list if len(string) > 3]
+print(new_list)
+```
+
