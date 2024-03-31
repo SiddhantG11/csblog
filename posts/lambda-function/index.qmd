@@ -1,0 +1,10 @@
+---
+title: "Lambda Functions in python"
+description: "Short Overview of lambda functions"
+author: "Siddhant"
+date: "29/03/2024"
+draft: true
+---
+# 
+> Generally used with filter,sorted,map 
+<!-- TODO need to have posts on these also -->

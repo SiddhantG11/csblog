@@ -1,0 +1,12 @@
+{
+  "hash": "d63c99dba93b9e69fb84473f9d789359",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"map and filter in python\"\nauthor: \"Siddhant\"\ndate: \"2024-03-31\"\ncategories: [python] \n---\n\n# `map()` function \n\n`map()` is used to apply a function to all items of a list. \n\n::: {#bc8d2e93 .cell execution_count=1}\n``` {.python .cell-code}\ndef cube(x): return x*x*x\nnum_list = [1,2,3,4]\ncube_list = map(cube,num_list)\nprint(cube_list)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n<map object at 0x10622b070>\n```\n:::\n:::\n\n\nThe map function returns a map object which you need to convert into the desired data type. \n\n::: {#3ae867a4 .cell execution_count=2}\n``` {.python .cell-code}\nprint(list(cube_list))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1, 8, 27, 64]\n```\n:::\n:::\n\n\n# `filter()` \n\nLike `map()` this function also takes a function and an _iterable_ (anything that can be iterated upon) and returns the values for which the function inside the filter returns true. \n\n::: {#c6f0ea97 .cell execution_count=3}\n``` {.python .cell-code}\n# define a function that returns all even numbers \ndef is_even(num): return num % 2 == 0 \nl = (list(range(10)))\nnew_list = filter(is_even,l)\nprint(list(new_list))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[0, 2, 4, 6, 8]\n```\n:::\n:::\n\n\nyes, these functions can be `lambda` functions too. \n\n::: {#09baff58 .cell execution_count=4}\n``` {.python .cell-code}\nl = (list(range(20)))\neven_list = filter(lambda num: num%2 ==0 , l)\nprint(list(even_list))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]\n```\n:::\n:::\n\n\nThe function that this method takes should return a boolean value. \n\n# `reduce()`\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

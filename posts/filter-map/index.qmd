@@ -1,0 +1,45 @@
+---
+title: "map and filter in python"
+author: "Siddhant"
+date: "2024-03-31"
+categories: [python] 
+---
+
+# `map()` function 
+
+`map()` is used to apply a function to all items of a list. 
+
+```{python}
+def cube(x): return x*x*x
+num_list = [1,2,3,4]
+cube_list = map(cube,num_list)
+print(cube_list)
+
+```
+The map function returns a map object which you need to convert into the desired data type. 
+
+```{python}
+print(list(cube_list))
+```
+# `filter()` 
+
+Like `map()` this function also takes a function and an _iterable_ (anything that can be iterated upon) and returns the values for which the function inside the filter returns true. 
+
+```{python}
+# define a function that returns all even numbers 
+def is_even(num): return num % 2 == 0 
+l = (list(range(10)))
+new_list = filter(is_even,l)
+print(list(new_list))
+```
+yes, these functions can be `lambda` functions too. 
+
+```{python}
+l = (list(range(20)))
+even_list = filter(lambda num: num%2 ==0 , l)
+print(list(even_list))
+```
+
+The function that this method takes should return a boolean value. 
+
+# `reduce()`
