@@ -7,7 +7,17 @@ draft: true
 --- 
 # os module 
 
-TBD 
+I find directories and navigating files confusing. The `os` module can help with that. 
+
+- `os.getcwd()` -> prints the current directory. 
+- `os.chdir()` -> changes current working directory  
+- `os.mkdir() -> creates directory 
+  - use `os.makedirs()` if sub directories are needed
+    -Use `os.removedirs()` to remove 
+
+> it's generally not a good idea to use `removedirs` since you can delete folders you don't want to on accident 
+
+- `os.rename("old file name","new file name")`
 
 
 
