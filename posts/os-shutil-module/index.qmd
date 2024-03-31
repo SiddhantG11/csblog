@@ -1,0 +1,17 @@
+--- 
+title: "Shutil and os Module"
+author: "Siddhant"
+date: "2024-03-31"
+categories: [python]
+draft: true 
+--- 
+# os module 
+
+TBD 
+
+
+
+# shutil 
+
+
+TBD 
