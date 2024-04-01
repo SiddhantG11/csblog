@@ -1,7 +1,7 @@
 --- 
 title: "Shutil and os Module"
 author: "Siddhant"
-date: "2024-03-31"
+date: "2024-04-01"
 categories: [python]
 draft: false 
 --- 
