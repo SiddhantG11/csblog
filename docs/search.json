@@ -14,38 +14,17 @@
     "text": "Example of python list Comprehension\nLately, I’ve been seeing the normal way of using lists being replaced by list comprehension.\nHere’s how it works. Let’s say you want to add the squares of 1 to 10 to a list. How would you do that?\nThe “Old” way that I’m familiar with is this:\n\nsquares = [] # initialise an empty list \nfor num in range(10):\n    squares.append(num**2)\nprint(squares)\n\n[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n\nThe newer or more pythonic way to do that is this: initialize the squares list to the for loop directly.\n\nsquares = [num**2 for num in range(10)]\nprint(squares)\n\n[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n\nYou can use list comprehensions with conditional statements too!\nHere’s a problem: Given a list of strings, create a new list that contains only those strings that are longer than 3 characters.\nOne way to do it:\n\nlist_of_strings = [\"apple\", \"pear\", \"fig\", \"banana\", \"kiwi\"]\n\nl = []\nfor string in list_of_strings:\n    if len(string) &gt; 3:\n        l.append(string)\n        \nprint(l)\n\n['apple', 'pear', 'banana', 'kiwi']\n\n\nBut here’s a more concise way to do the same thing\n\ninput_list = [\"apple\", \"pear\", \"fig\", \"banana\", \"kiwi\"]\nnew_list = [string for string in input_list if len(string) &gt; 3]\nprint(new_list)\n\n['apple', 'pear', 'banana', 'kiwi']\n\n\nThe syntax here is list_variable = [what the loop should return : loop : conditional]"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Code post",
-    "section": "",
-    "text": "This is a post with executable code.\nprint('Hello, world')"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "csblog",
-    "section": "",
-    "text": "map and filter in python\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 31, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nPython List Comprehension Example\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSiddhant\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/filter-sorted-map/index.html",
-    "href": "posts/filter-sorted-map/index.html",
-    "title": "map and filter in python",
-    "section": "",
-    "text": "map() function\nmap() is used to apply a function to all items of a list.\n\ndef cube(x): return x*x*x\nnum_list = [1,2,3,4]\ncube_list = map(cube,num_list)\nprint(cube_list)\n\n&lt;map object at 0x13459aec0&gt;\n\n\nThe map function returns a map object which you need to convert into the desired data type.\n\nprint(list(cube_list))\n\n[1, 8, 27, 64]\n\n\n\n\nfilter()\nLike map() this function also takes a function and an iterable (anything that can be iterated upon) and returns the values for which the function inside the filter returns true.\n\n# define a function that returns all even numbers \ndef is_even(num): return num % 2 == 0 \nl = (list(range(10)))\nnew_list = filter(is_even,l)\nprint(list(new_list))\n\n[0, 2, 4, 6, 8]\n\n\nyes, these functions can be lambda functions too.\n\nl = (list(range(20)))\neven_list = filter(lambda num: num%2 ==0 , l)\nprint(list(even_list))\n\n[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]\n\n\nThe function that this method takes should return a boolean value.\n\n\nreduce()"
-  },
-  {
     "objectID": "posts/filter-map/index.html",
     "href": "posts/filter-map/index.html",
     "title": "map and filter in python",
     "section": "",
     "text": "map() function\nmap() is used to apply a function to all items of a list.\n\ndef cube(x): return x*x*x\nnum_list = [1,2,3,4]\ncube_list = map(cube,num_list)\nprint(cube_list)\n\n&lt;map object at 0x10622b070&gt;\n\n\nThe map function returns a map object which you need to convert into the desired data type.\n\nprint(list(cube_list))\n\n[1, 8, 27, 64]\n\n\n\n\nfilter()\nLike map() this function also takes a function and an iterable (anything that can be iterated upon) and returns the values for which the function inside the filter returns true.\n\n# define a function that returns all even numbers \ndef is_even(num): return num % 2 == 0 \nl = (list(range(10)))\nnew_list = filter(is_even,l)\nprint(list(new_list))\n\n[0, 2, 4, 6, 8]\n\n\nyes, these functions can be lambda functions too.\n\nl = (list(range(20)))\neven_list = filter(lambda num: num%2 ==0 , l)\nprint(list(even_list))\n\n[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]\n\n\nThe function that this method takes should return a boolean value.\n\n\nreduce()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Siddhant’s Blog",
+    "section": "",
+    "text": "map and filter in python\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 31, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nPython List Comprehension Example\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSiddhant\n\n\n\n\n\n\nNo matching items"
   }
 ]

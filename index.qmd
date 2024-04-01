@@ -1,5 +1,5 @@
 ---
-title: "csblog"
+title: "Siddhant's Blog"
 listing:
   contents: posts
   sort: "date desc"
