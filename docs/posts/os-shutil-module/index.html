@@ -148,24 +148,27 @@ ul.task-list li input[type="checkbox"] {
 <h1>os module</h1>
 <p>I find directories and navigating files confusing. The <code>os</code> module can help with that.</p>
 <ul>
-<li><code>os.getcwd()</code> -&gt; prints the current directory.</li>
-<li><code>os.chdir()</code> -&gt; changes current working directory<br>
+<li><code>os.getcwd()</code> : prints the current directory.</li>
+<li><code>os.chdir()</code> : changes current working directory<br>
 </li>
-<li>`os.mkdir() -&gt; creates directory
+<li><code>os.mkdir()</code> : creates directory
 <ul>
 <li>use <code>os.makedirs()</code> if sub directories are needed -Use <code>os.removedirs()</code> to remove</li>
 </ul></li>
+<li><code>os.rename("old file name","new file name")</code></li>
 </ul>
 <blockquote class="blockquote">
 <p>it’s generally not a good idea to use <code>removedirs</code> since you can delete folders you don’t want to on accident</p>
 </blockquote>
-<ul>
-<li><code>os.rename("old file name","new file name")</code></li>
-</ul>
 </section>
 <section id="shutil" class="level1">
 <h1>shutil</h1>
-<p>TBD</p>
+<p>Super useful module for file/directory operations</p>
+<ul>
+<li><code>shutil.move("source","destination")</code> moves file from source path to destination</li>
+<li><code>shutil.copy("source","destination")</code> : copies file from source to destination</li>
+<li><code>os.copytree("source","destination")</code> : copies folder and all sub folders to destination</li>
+</ul>
 
 
 </section>

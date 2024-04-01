@@ -25,6 +25,13 @@
     "href": "index.html",
     "title": "Siddhant’s Blog",
     "section": "",
-    "text": "map and filter in python\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 31, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nPython List Comprehension Example\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSiddhant\n\n\n\n\n\n\nNo matching items"
+    "text": "map and filter in python\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 31, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nShutil and os Module\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 31, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nPython List Comprehension Example\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSiddhant\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/os-shutil-module/index.html",
+    "href": "posts/os-shutil-module/index.html",
+    "title": "Shutil and os Module",
+    "section": "",
+    "text": "os module\nI find directories and navigating files confusing. The os module can help with that.\n\nos.getcwd() : prints the current directory.\nos.chdir() : changes current working directory\n\nos.mkdir() : creates directory\n\nuse os.makedirs() if sub directories are needed -Use os.removedirs() to remove\n\nos.rename(\"old file name\",\"new file name\")\n\n\nit’s generally not a good idea to use removedirs since you can delete folders you don’t want to on accident\n\n\n\nshutil\nSuper useful module for file/directory operations\n\nshutil.move(\"source\",\"destination\") moves file from source path to destination\nshutil.copy(\"source\",\"destination\") : copies file from source to destination\nos.copytree(\"source\",\"destination\") : copies folder and all sub folders to destination"
   }
 ]
