@@ -1,0 +1,12 @@
+{
+  "hash": "7ea9474907195245feadc8bbe6c6dcf0",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "--- \ntitle: pandas query method \nauthor: \"Siddhant\"\ndate: \"2024-04-03\"\ncategories: [python]\ndescription: \"overview of the pandas query method\"\n---\n\nThe `df.query` method in pandas is used to filter a dataframe based on a boolean critera. \n\nThis means you can use operators like: `==,!=,>,< >=,<=,and,or,not` inside the query as a string! \n\nHere's how it works \n\n::: {#820ff8ac .cell execution_count=1}\n``` {.python .cell-code}\nimport pandas as pd\n# Sample DataFrame\ndata = {\n    'Name': ['Alice', 'Bob', 'Charlie', 'David'],\n    'Age': [25, 30, 35, 40],\n    'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']\n}\ndf = pd.DataFrame(data)\nprint(df)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n      Name  Age         City\n0    Alice   25     New York\n1      Bob   30  Los Angeles\n2  Charlie   35      Chicago\n3    David   40      Houston\n```\n:::\n:::\n\n\nIf you want to filter the data by one city (for example Houston). You do create a filter for that like this: \n\n::: {#98d071d7 .cell execution_count=2}\n``` {.python .cell-code}\nHouston = df[df['City']=='Houston']\nprint(Houston)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n    Name  Age     City\n3  David   40  Houston\n```\n:::\n:::\n\n\nBut if you use the `query` method you can create a filter much faster like this \n\n::: {#f2cc8a47 .cell execution_count=3}\n``` {.python .cell-code}\nHouston = df.query(\"City == 'Houston'\")\nprint(Houston)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n    Name  Age     City\n3  David   40  Houston\n```\n:::\n:::\n\n\nYou can refer to variables in the environment using the `@` symbol \n\n::: {#983efc85 .cell execution_count=4}\n``` {.python .cell-code}\ntarget_city = 'Houston'\ndf_city = df.query(\"City == @target_city\")\nprint(df_city)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n    Name  Age     City\n3  David   40  Houston\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

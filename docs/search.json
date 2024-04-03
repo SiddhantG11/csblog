@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Siddhant’s Blog",
     "section": "",
-    "text": "Shutil and os Module\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 1, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nmap and filter in python\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 31, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nPython List Comprehension Example\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSiddhant\n\n\n\n\n\n\nNo matching items"
+    "text": "pandas query method\n\n\n\n\n\n\npython\n\n\n\noverview of the pandas query method\n\n\n\n\n\nApr 3, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nShutil and os Module\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 1, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nmap and filter in python\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 31, 2024\n\n\nSiddhant\n\n\n\n\n\n\n\n\n\n\n\n\nPython List Comprehension Example\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nMar 25, 2024\n\n\nSiddhant\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/os-shutil-module/index.html",
@@ -33,5 +33,12 @@
     "title": "Shutil and os Module",
     "section": "",
     "text": "os module\nI find directories and navigating files confusing. The os module can help with that.\n\nos.getcwd() : prints the current directory.\nos.chdir() : changes current working directory\n\nos.mkdir() : creates directory\n\nuse os.makedirs() if sub directories are needed -Use os.removedirs() to remove\n\nos.rename(\"old file name\",\"new file name\")\n\n\nit’s generally not a good idea to use removedirs since you can delete folders you don’t want to on accident\n\n\n\nshutil\nSuper useful module for file/directory operations\n\nshutil.move(\"source\",\"destination\") moves file from source path to destination\nshutil.copy(\"source\",\"destination\") : copies file from source to destination\nos.copytree(\"source\",\"destination\") : copies folder and all sub folders to destination"
+  },
+  {
+    "objectID": "posts/query/index.html",
+    "href": "posts/query/index.html",
+    "title": "pandas query method",
+    "section": "",
+    "text": "The df.query method in pandas is used to filter a dataframe based on a boolean critera.\nThis means you can use operators like: ==,!=,&gt;,&lt; &gt;=,&lt;=,and,or,not inside the query as a string!\nHere’s how it works\n\nimport pandas as pd\n# Sample DataFrame\ndata = {\n    'Name': ['Alice', 'Bob', 'Charlie', 'David'],\n    'Age': [25, 30, 35, 40],\n    'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']\n}\ndf = pd.DataFrame(data)\nprint(df)\n\n      Name  Age         City\n0    Alice   25     New York\n1      Bob   30  Los Angeles\n2  Charlie   35      Chicago\n3    David   40      Houston\n\n\nIf you want to filter the data by one city (for example Houston). You do create a filter for that like this:\n\nHouston = df[df['City']=='Houston']\nprint(Houston)\n\n    Name  Age     City\n3  David   40  Houston\n\n\nBut if you use the query method you can create a filter much faster like this\n\nHouston = df.query(\"City == 'Houston'\")\nprint(Houston)\n\n    Name  Age     City\n3  David   40  Houston\n\n\nYou can refer to variables in the environment using the @ symbol\n\ntarget_city = 'Houston'\ndf_city = df.query(\"City == @target_city\")\nprint(df_city)\n\n    Name  Age     City\n3  David   40  Houston"
   }
 ]

@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/query/index.html",
       "/posts/os-shutil-module/index.html",
       "/posts/filter-map/index.html",
       "/posts/list-comprehension/index.html"

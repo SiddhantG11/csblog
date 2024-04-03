@@ -1,0 +1,44 @@
+--- 
+title: pandas query method 
+author: "Siddhant"
+date: "2024-04-03"
+categories: [python]
+description: "overview of the pandas query method"
+---
+The `df.query` method in pandas is used to filter a dataframe based on a boolean critera. 
+
+This means you can use operators like: `==,!=,>,< >=,<=,and,or,not` inside the query as a string! 
+
+Here's how it works 
+
+```{python}
+import pandas as pd
+# Sample DataFrame
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Age': [25, 30, 35, 40],
+    'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']
+}
+df = pd.DataFrame(data)
+print(df)
+```
+If you want to filter the data by one city (for example Houston). You do create a filter for that like this: 
+
+```{python}
+Houston = df[df['City']=='Houston']
+print(Houston)
+```
+But if you use the `query` method you can create a filter much faster like this 
+
+```{python}
+Houston = df.query("City == 'Houston'")
+print(Houston)
+```
+
+You can refer to variables in the environment using the `@` symbol 
+
+```{python}
+target_city = 'Houston'
+df_city = df.query("City == @target_city")
+print(df_city)
+```
